@@ -1,7 +1,7 @@
 Role Name
 =========
 
-This is all raw placeholder until content is finalized and tested
+At present this content is very much a work in progress, the goal will be to use this content to deploy a system on RHV for demo reasons.
 
 Requirements
 ------------
