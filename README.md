@@ -1,7 +1,7 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+This is all raw placeholder until content is finalized and tested
 
 Requirements
 ------------
