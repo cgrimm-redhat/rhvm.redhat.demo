@@ -1,28 +1,24 @@
 ---
-- name: Create VM on RHV
-  connection: local
-  gather_facts: false
-  tasks:
-  - name: Login to oVirt
-    ovirt_auth:
-      hostname: "{{ rhvm_fqdn }}"
-      username: "{{ rhvm_user }}"
-      password: "{{ rhvm_password }}"
-      ca_file: "{{ rhvm_cafile | default(omit) }}"
-      insecure: "{{ rhvm_insecure | default(true) }}"
+- name: Login to oVirt
+  ovirt_auth:
+    hostname: "{{ rhvm_fqdn }}"
+    username: "{{ rhvm_user }}"
+    password: "{{ rhvm_password }}"
+    ca_file: "{{ rhvm_cafile | default(omit) }}"
+    insecure: "{{ rhvm_insecure | default(true) }}"
 
-  - name: Create and run VM from template
-    ovirt_vm:
-      auth: "{{ ovirt_auth }}"
-      name: "{{ vm_name }}"
-      template: "{{ template }}"
-      cluster: "{{ cluster }}"
-      memory: "{{ vm_memory }}"
-      high_availability: false
-      state: present
-      wait: yes
+- name: Create and run VM from template
+  ovirt_vm:
+    auth: "{{ ovirt_auth }}"
+    name: "{{ vm_name }}"
+    template: "{{ template }}"
+    cluster: "{{ cluster }}"
+    memory: "{{ vm_memory }}"
+    high_availability: false
+    state: present
+    wait: yes
 
-  - name: Logout from oVirt
-    ovirt_auth:
-      state: absent
-      ovirt_auth: "{{ ovirt_auth }}"
+- name: Logout from oVirt
+  ovirt_auth:
+    state: absent
+    ovirt_auth: "{{ ovirt_auth }}"

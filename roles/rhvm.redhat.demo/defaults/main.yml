@@ -1,12 +1,10 @@
----
 # defaults file for rhvm.redhat.demo
----
 cluster: Default
 datacenter: Default
-rhvm_fqdn: rhvm.example.com
-rhvm_password: Lunchbox1!
+rhvm_fqdn: "rhvm.pbjunkie.com:8443"
+rhvm_password: "Redhat1234!@#$"
 rhvm_user: admin@internal
-template: rhel8-template
+template: rhel8_template
 vm_memory: 1GiB
-vm_name: rhel8-vm
+vm_name: rhel8-test
 
