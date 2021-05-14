@@ -15,7 +15,7 @@
     cluster: "{{ cluster }}"
     memory: "{{ vm_memory }}"
     high_availability: false
-    state: present
+    state: running
     wait: yes
 
 - name: Logout from oVirt
