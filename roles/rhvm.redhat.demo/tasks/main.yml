@@ -14,6 +14,8 @@
     template: "{{ template }}"
     cluster: "{{ cluster }}"
     memory: "{{ vm_memory }}"
+    cpu_cores: "{{ cores }}"
+    cpu_sockets: "{{ sockets }}"
     high_availability: false
     state: running
     wait: yes
