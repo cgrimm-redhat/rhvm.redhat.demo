@@ -14,6 +14,13 @@
     template: "{{ template }}"
     cluster: "{{ cluster }}"
     memory: "{{ vm_memory }}"
+    cloud_init:
+      dns_servers: '8.8.8.8 8.8.4.4'
+      nic_boot_protocol: static
+      nic_ip_address: "{{ ip_address }}"
+      nic_netmask: "{{ netmask }}"
+      nic_gateway: "{{ gateway }}"
+      nic_name: eth1 
     high_availability: false
     state: running
     wait: yes

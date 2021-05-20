@@ -7,4 +7,7 @@ rhvm_user: admin@internal
 template: rhel8_template
 vm_memory: 1GiB
 vm_name: rhel8-test
+ip_address: 192.168.2.230
+netmask: 255.255.255.0
+gateway: 192.168.2.1
 
