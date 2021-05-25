@@ -1,7 +1,7 @@
 # defaults file for rhvm.redhat.demo
 cluster: Default
 datacenter: Default
-rhvm_fqdn: "rhvm.lab:8443"
+rhvm_fqdn: "rhvm.lab"
 rhvm_password: "Redhat1234!@#$"
 rhvm_user: admin@internal
 template: rhel8_template
